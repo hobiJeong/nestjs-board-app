@@ -8,7 +8,7 @@ export class BoardsService {
     private boards: Board[] = [];
 
 
-    getAllBoards(): Board[] {
+    getAllBoards(): Board[] { 
         return this.boards;
     }
 
@@ -24,6 +24,10 @@ export class BoardsService {
 
         this.boards.push(board);
         return board;
+    }
+
+    getBoardById(id: string): Board {
+        return this.boards.find((board) => board.id === id);
     }
 
 }
